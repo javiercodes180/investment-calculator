@@ -27,14 +27,21 @@
 
         <!-- GROW MODE -->
         <div id="growMode">
+
           <div class="input-group">
-            <label>One-Time Investment ($) <span class="optional">optional</span></label>
+            <div class="step-label">
+              <div class="step-number">1</div>
+              <label>One-Time Investment ($) <span class="optional">optional</span></label>
+            </div>
             <p class="hint">A lump sum you're investing today. e.g. $10,000</p>
             <input type="text" id="lumpsum" placeholder="e.g. 10,000" oninput="formatInput(this)" />
           </div>
 
-          <div class="input-group">
-            <label>Ongoing Contribution</label>
+          <div class="input-group" style="margin-top: 32px;">
+            <div class="step-label">
+              <div class="step-number">2</div>
+              <label>Ongoing Contribution</label>
+            </div>
             <p class="hint">How much will you keep adding regularly?</p>
             <div class="toggle-group">
               <button class="toggle-btn active" onclick="setType('monthly', event)">Monthly</button>
@@ -43,31 +50,43 @@
             </div>
           </div>
 
-          <div class="input-group" id="contributionGroup">
+          <div class="input-group" id="contributionGroup" style="margin-top: 16px;">
             <label id="amountLabel">Monthly Contribution ($)</label>
             <p class="hint" id="amountHint">How much will you invest each month? e.g. $500</p>
             <input type="text" id="amount" placeholder="e.g. 500" oninput="formatInput(this)" />
           </div>
+
         </div>
 
         <!-- GOAL MODE -->
         <div id="goalMode" style="display:none">
+
           <div class="input-group">
-            <label>Target Amount ($)</label>
+            <div class="step-label">
+              <div class="step-number">1</div>
+              <label>Target Amount ($)</label>
+            </div>
             <p class="hint">How much do you want to end up with? e.g. $1,000,000</p>
             <input type="text" id="goalAmount" placeholder="e.g. 1,000,000" oninput="formatInput(this)" />
           </div>
 
-          <div class="input-group">
-            <label>One-Time Investment ($) <span class="optional">optional</span></label>
+          <div class="input-group" style="margin-top: 32px;">
+            <div class="step-label">
+              <div class="step-number">2</div>
+              <label>One-Time Investment ($) <span class="optional">optional</span></label>
+            </div>
             <p class="hint">Any lump sum you're starting with today.</p>
             <input type="text" id="goalLumpsum" placeholder="e.g. 10,000" oninput="formatInput(this)" />
           </div>
+
         </div>
 
         <!-- SHARED FIELDS -->
         <div class="input-group">
-          <label>Annual Return (%)</label>
+          <div class="step-label">
+            <div class="step-number">3</div>
+            <label>Annual Return (%)</label>
+          </div>
           <p class="hint">
             Your expected yearly return. Not sure? Here are some benchmarks:
             <br />• <strong>3.5%</strong> — High Yield Savings Account (HYSA)
@@ -80,7 +99,10 @@
         </div>
 
         <div class="input-group">
-          <label>Number of Years</label>
+          <div class="step-label">
+            <div class="step-number">4</div>
+            <label>Number of Years</label>
+          </div>
           <p class="hint">How long will you let your investment grow?</p>
           <input type="number" id="years" placeholder="e.g. 10" />
         </div>
